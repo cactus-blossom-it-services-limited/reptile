@@ -1,0 +1,9 @@
+
+reptile.image_replace:
+  path: '/reptile/form/image-replace'
+  defaults:
+    _form: '\Drupal\reptile\Form\ImageReplace'
+    _title: 'ImageReplace'
+  requirements:
+    _access: 'TRUE'
+  
