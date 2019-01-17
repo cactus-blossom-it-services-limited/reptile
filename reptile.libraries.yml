@@ -1,0 +1,6 @@
+image-replace:
+  version 1.x
+  js:
+    js/image-replace.js: {}
+  dependencies:
+    - core/jquery
