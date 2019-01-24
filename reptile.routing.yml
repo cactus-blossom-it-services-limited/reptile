@@ -6,4 +6,13 @@ reptile.image_replace:
     _title: 'ImageReplace'
   requirements:
     _access: 'TRUE'
-  
+
+
+reptile.image_replace_two:
+  path: '/image-replace-two'
+  defaults:
+    _form: '\Drupal\reptile\Form\ImageReplaceTwo'
+    _title: 'ImageReplaceTwo'
+  requirements:
+    _access: 'TRUE'
+

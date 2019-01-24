@@ -25,37 +25,47 @@ class ImageReplace extends FormBase
      */
     public function buildForm(array $form, FormStateInterface $form_state)
     {
-        $form['image_radios'] = [
-            '#type' => 'radios',
-            '#title' => $this->t('Image radio buttons'),
-            '#description' => $this->t('none'),
-            '#options' => ['Image1' => $this->t('Image1'), 'Image2' => $this->t('Image2'), 'Image3' => $this->t('Image3'), 'Image4' => $this->t('Image4'), 'Image5' => $this->t('Image5'),],
-            '#weight' => '0',
-        ];
-        $form['submit1'] = [
-            '#type' => 'button',
-            '#title' => $this->t('submit'),
-            '#description' => $this->t('none'),
-            '#default_value' => 'Submit',
-            '#weight' => '0',
-        ];
-
-        $form['image_checkboxes'] = [
-            '#type' => 'checkboxes',
-            '#title' => $this->t('Image checkbox buttons'),
-            '#description' => $this->t('none'),
-            '#options' => ['Image1' => $this->t('Image1'), 'Image2' => $this->t('Image2'), 'Image3' => $this->t('Image3'), 'Image4' => $this->t('Image4'), 'Image5' => $this->t('Image5'),],
-            '#weight' => '0',
-        ];
-        $form['submit2'] = [
-            '#type' => 'button',
-            '#title' => $this->t('submit'),
-            '#description' => $this->t('none'),
-            '#default_value' => 'Submit',
-            '#weight' => '0',
-        ];
-
-
+        $form['drivertext'] = array(
+            '#title' => $this
+                ->t('AJAX-enabled textfield.'),
+            '#description' => $this
+                ->t("When this one AJAX-triggers and the spare required field is empty, you should not get an error."),
+            '#type' => 'textfield',
+            '#default_value' => $form_state
+                ->getValue('drivertext', ''),
+            '#ajax' => array(
+                'callback' => 'ajax_forms_test_validation_form_callback',
+                'wrapper' => 'message_area',
+                'method' => 'replace',
+            ),
+            '#suffix' => '<div id="message_area"></div>',
+        );
+        $form['drivernumber'] = array(
+            '#title' => $this
+                ->t('AJAX-enabled number field.'),
+            '#description' => $this
+                ->t("When this one AJAX-triggers and the spare required field is empty, you should not get an error."),
+            '#type' => 'number',
+            '#default_value' => $form_state
+                ->getValue('drivernumber', ''),
+            '#ajax' => array(
+                'callback' => 'ajax_forms_test_validation_number_form_callback',
+                'wrapper' => 'message_area_number',
+                'method' => 'replace',
+            ),
+            '#suffix' => '<div id="message_area_number"></div>',
+        );
+        $form['spare_required_field'] = array(
+            '#title' => $this
+                ->t("Spare Required Field"),
+            '#type' => 'textfield',
+            '#required' => TRUE,
+        );
+        $form['submit'] = array(
+            '#type' => 'submit',
+            '#value' => $this
+                ->t('Submit'),
+        );
         return $form;
     }
 

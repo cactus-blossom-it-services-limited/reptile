@@ -1,5 +1,8 @@
 image-replace:
-  version 1.x
+  version: 1.x
+  css:
+    theme:
+      css/image-replace.css: {}
   js:
     js/image-replace.js: {}
   dependencies:
