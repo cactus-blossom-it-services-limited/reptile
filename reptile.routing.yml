@@ -1,6 +1,6 @@
 
 reptile.image_replace:
-  path: '/reptile/form/image-replace'
+  path: '/reptile/image-replace'
   defaults:
     _form: '\Drupal\reptile\Form\ImageReplace'
     _title: 'ImageReplace'
@@ -9,10 +9,19 @@ reptile.image_replace:
 
 
 reptile.image_replace_two:
-  path: '/image-replace-two'
+  path: '/reptile/image-replace-two'
   defaults:
     _form: '\Drupal\reptile\Form\ImageReplaceTwo'
     _title: 'ImageReplaceTwo'
   requirements:
     _access: 'TRUE'
 
+
+reptile.checkboxes_yellow_form:
+  path: '/reptile/checkboxes-yellow'
+  defaults:
+    _form: '\Drupal\reptile\Form\CheckboxesYellowForm'
+    _title: 'CheckboxesYellowForm'
+  requirements:
+    _access: 'TRUE'
+  

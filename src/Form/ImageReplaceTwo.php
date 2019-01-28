@@ -79,6 +79,8 @@ class ImageReplaceTwo extends FormBase
             '#attributes' => array(
                 'name' => 'image_checkbox',
                 'value' => 4,
+                'checked' => FALSE,
+
             ),
         ];
         $form['image5'] = [
@@ -93,15 +95,22 @@ class ImageReplaceTwo extends FormBase
             '#attributes' => array(
                 'name' => 'image_checkbox',
                 'value' => 5,
+
             ),
         ];
-        $form['submit'] = [
-            '#type' => 'submit',
-            '#value' => $this->t('Submit'),
-            '#weight' => '3',
 
+        // Group submit handlers in an actions element with a key of "actions" so
+        // that it gets styled correctly, and so that other modules may add actions
+        // to the form. This is not required, but is convention.
+        $form['actions'] = [
+            '#type' => 'actions',
         ];
 
+        // Add a submit button that handles the submission of the form.
+        $form['actions']['submit'] = [
+            '#type' => 'submit',
+            '#value' => $this->t('Submit'),
+        ];
 
         $form['#theme'] = 'form__image_replace_two';
 
@@ -130,4 +139,3 @@ class ImageReplaceTwo extends FormBase
     }
 
 }
-

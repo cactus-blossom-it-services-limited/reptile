@@ -66,6 +66,7 @@ class ImageReplace extends FormBase
             '#value' => $this
                 ->t('Submit'),
         );
+
         return $form;
     }
 

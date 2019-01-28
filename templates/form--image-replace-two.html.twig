@@ -1,0 +1,26 @@
+ <form{{ attributes }}>
+    <div class="d-flex">
+        <div class="flex-shrink">
+            {{ element.image1 }}
+        </div>
+        <div class="flex-shrink">
+            {{ element.image2 }}
+        </div>
+        <div class="flex-shrink">
+            {{ element.image3 }}
+        </div>
+        <div class="flex-shrink">
+            {{ element.image4 }}
+        </div>
+        <div class="flex-shrink">
+            {{ element.image5 }}
+        </div>
+    </div>
+    <div class="d-flex">
+        <div class="mt-3 ml-lg-4">
+            {{ element.actions.submit }}
+        </div>
+    </div>
+     {{ children }}
+</form>
+

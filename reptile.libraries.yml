@@ -1,5 +1,5 @@
 image-replace:
-  version: 1.x
+  version: VERSION
   css:
     theme:
       css/image-replace.css: {}
@@ -7,3 +7,4 @@ image-replace:
     js/image-replace.js: {}
   dependencies:
     - core/jquery
+    - core/drupal

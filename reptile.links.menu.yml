@@ -1,6 +1,13 @@
 reptile.image_replace_two:
-  title: Image replace2
+  title: Image replace two
   menu_name: main
   route_name: reptile.image_replace_two
   expanded: TRUE
-  weight: 110
+  weight: 20
+
+reptile.image_replace:
+  title: Image replace
+  menu_name: main
+  route_name: reptile.image_replace
+  expanded: TRUE
+  weight: 21
